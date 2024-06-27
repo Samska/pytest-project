@@ -1,5 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from config import WEB_BASE_URL
 
 class BasePage:
     def __init__(self, browser):
@@ -21,3 +22,6 @@ class BasePage:
     
     def wait_for_url_contains(self, path):
         return WebDriverWait(self.browser, 10).until(EC.url_contains(path))
+    
+    def open_url(self, url):
+        self.browser.get(url)
