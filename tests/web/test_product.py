@@ -1,6 +1,6 @@
 import pytest
 from pages.product_page import ProductPage
-from data.product_data import create_product_data
+from tests.data.product_data import create_product_data
 
 @pytest.fixture(scope="module")
 def product_page(browser):
@@ -13,7 +13,7 @@ def test_create_product_success(product_page):
     
     product_data = create_product_data()
         
-    product_page.create_product(product_data['name'], product_data['price'], product_data['description'], product_data['quantity'])
+    product_page.create_product(product_data['nome'], product_data['preco'], product_data['descricao'], product_data['quantidade'])
     product_page.wait_for_url_contains('/admin/listarprodutos')    
     assert '/admin/listarprodutos' in product_page.browser.current_url
     

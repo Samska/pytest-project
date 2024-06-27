@@ -1,6 +1,6 @@
 import pytest
 from pages.signup_page import SignupPage
-from data.user_data import create_user_data
+from tests.data.user_data import create_user_data
 
 @pytest.fixture(scope="function")
 def signup_page(browser):
@@ -10,7 +10,7 @@ def signup_page(browser):
 
 def test_signup_success(signup_page):
     user_data = create_user_data()
-    signup_page.signup(user_data['name'], user_data['email'], user_data['password'], True)    
+    signup_page.signup(user_data['nome'], user_data['email'], user_data['password'], True)    
     signup_page.wait_for_element(signup_page.ALERT_MESSAGE)    
     page_text = signup_page.get_page_text()
     assert "Cadastro realizado com sucesso" in page_text
