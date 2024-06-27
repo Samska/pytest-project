@@ -1,9 +1,11 @@
 import pytest
 from pages.login_page import LoginPage
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="function")
 def login_page(browser):
-    return LoginPage(browser)
+    page = LoginPage(browser)
+    page.open_url(LoginPage.URL)
+    return page
 
 def test_login_success(login_page):
     login_page.login('beltrano@qa.com.br', 'teste')

@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 def browser():
     driver_service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=driver_service)
+    driver.maximize_window()
     yield driver
     driver.quit()
 

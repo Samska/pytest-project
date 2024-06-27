@@ -13,12 +13,8 @@ class LoginPage(BasePage):
     
     def __init__(self, browser):
         super().__init__(browser)
-
-    def open(self):
-        self.browser.get(self.URL)
         
     def login(self, email, password):
-        self.open()
         self.input_text(self.EMAIL_INPUT, email)
         self.input_text(self.PASSWORD_INPUT, password)
         self.click_element(self.ENTRAR_BUTTON)

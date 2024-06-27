@@ -16,11 +16,7 @@ class SignupPage(BasePage):
     def __init__(self, browser):
         super().__init__(browser)
 
-    def open(self):
-        self.browser.get(self.URL)
-
     def signup(self, nome, email, password, is_admin):
-        self.open()
         self.input_text(self.NOME_INPUT, nome)
         self.input_text(self.EMAIL_INPUT, email)
         self.input_text(self.PASSWORD_INPUT, password)

@@ -1,6 +1,5 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from config import WEB_BASE_URL
 
 class BasePage:
     def __init__(self, browser):

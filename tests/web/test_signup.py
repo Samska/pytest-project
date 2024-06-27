@@ -1,9 +1,11 @@
 import pytest
 from pages.signup_page import SignupPage
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="function")
 def signup_page(browser):
-    return SignupPage(browser)
+    page = SignupPage(browser)
+    page.open_url(SignupPage.URL)
+    return page
 
 def test_signup_success(signup_page, fake):
     unique_email = fake.email()
