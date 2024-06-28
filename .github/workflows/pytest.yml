@@ -15,7 +15,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.10
+        python-version: 3.8
 
     - name: Install dependencies
       run: |
@@ -25,3 +25,16 @@ jobs:
     - name: Run tests
       run: |
         pytest
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: reports
+        path: ./reports
+
+    - name: Publish test report
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./reports
+        publish_branch: gh-pages
