@@ -1,7 +1,7 @@
 import pytest
 from tests.api.utils.login_utils import login
 from tests.api.utils.product_utils import create_product, get_product_by_id, update_product
-from tests.data.product_data import create_product_data
+from fixtures.payloads.product_data import create_product_data
 
 @pytest.fixture(scope="module")
 def authorization_token():

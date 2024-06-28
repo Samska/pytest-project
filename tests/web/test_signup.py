@@ -1,6 +1,6 @@
 import pytest
 from pages.signup_page import SignupPage
-from tests.data.user_data import create_user_data
+from fixtures.payloads.user_data import create_user_data
 
 @pytest.fixture(scope="function")
 def signup_page(browser):

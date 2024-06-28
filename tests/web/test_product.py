@@ -1,6 +1,6 @@
 import pytest
 from pages.product_page import ProductPage
-from tests.data.product_data import create_product_data
+from fixtures.payloads.product_data import create_product_data
 
 @pytest.fixture(scope="module")
 def product_page(browser):
