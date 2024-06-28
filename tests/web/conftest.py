@@ -11,8 +11,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 
 @pytest.fixture(scope="session")
 def browser():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
     driver_service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=driver_service)
+    driver = webdriver.Chrome(service=driver_service, options=options)
     driver.maximize_window()
     yield driver
     driver.quit()

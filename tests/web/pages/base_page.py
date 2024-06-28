@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from config import WEB_BASE_URL
 
 class BasePage:
-    LOGIN_URL = f"{WEB_BASE_URL}/login"
+    LOGIN_PATH = "/login"
     
     # Locators
     NAV_ITEM_HOME = (By.CSS_SELECTOR, '[data-testid=home]')
@@ -34,11 +34,11 @@ class BasePage:
     def wait_for_url_contains(self, path):
         return WebDriverWait(self.browser, 10).until(EC.url_contains(path))
     
-    def open_url(self, url):
-        self.browser.get(url)
+    def open_path(self, url):
+        self.browser.get(f"{WEB_BASE_URL}{url}")
         
     def login(self, email, password):
-        self.open_url(self.LOGIN_URL)
+        self.open_path(self.LOGIN_PATH)
         self.input_text((By.ID, 'email'), email)
         self.input_text((By.ID, 'password'), password)
         self.click_element((By.CSS_SELECTOR, '[data-testid=entrar]'))

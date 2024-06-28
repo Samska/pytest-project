@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-from config import WEB_BASE_URL
 
 class SignupPage(BasePage):
-    SIGNUP_URL = f"{WEB_BASE_URL}/cadastrarusuarios"
+    SIGNUP_PATH = "/cadastrarusuarios"
 
     # Locators
     NAME_INPUT = (By.ID, 'nome')

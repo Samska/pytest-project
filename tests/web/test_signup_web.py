@@ -5,7 +5,7 @@ from fixtures.payloads.user_data import create_user_data
 @pytest.fixture(scope="function")
 def signup_page(browser):
     page = SignupPage(browser)
-    page.open_url(SignupPage.SIGNUP_URL)
+    page.open_path(SignupPage.SIGNUP_PATH)
     return page
 
 def test_signup_success(signup_page):

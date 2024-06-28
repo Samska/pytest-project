@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-from config import WEB_BASE_URL
 
 class LoginPage(BasePage):
-    LOGIN_URL = f"{WEB_BASE_URL}/login"
+    LOGIN_PATH = "/login"
     
     # Locators
     EMAIL_INPUT = (By.ID, 'email')
@@ -15,7 +14,7 @@ class LoginPage(BasePage):
         super().__init__(browser)
         
     def open_login_page(self):
-        self.open_url(self.LOGIN_URL)
+        self.open_path(self.LOGIN_PATH)
         
     def login(self, email, password):
         self.input_text(self.EMAIL_INPUT, email)

@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-from config import WEB_BASE_URL
 
 class ProductPage(BasePage):
-    CREATE_PRODUCT_URL = f"{WEB_BASE_URL}/admin/cadastrarprodutos"
+    CREATE_PRODUCT_PATH = "/admin/cadastrarprodutos"
     
     # Locators
     NAME_INPUT = (By.ID, 'nome')

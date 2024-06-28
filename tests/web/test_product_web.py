@@ -9,7 +9,7 @@ def product_page(browser):
     return page
 
 def test_create_product_success(product_page):
-    product_page.click_element(product_page.NAV_ITEM_CREATE_PRODUCT)
+    product_page.open_path(ProductPage.CREATE_PRODUCT_PATH)
     
     product_data = create_product_data()
         
@@ -18,7 +18,7 @@ def test_create_product_success(product_page):
     assert '/admin/listarprodutos' in product_page.browser.current_url
     
 def test_create_product_empty_fields(product_page):
-    product_page.click_element(product_page.NAV_ITEM_CREATE_PRODUCT)    
+    product_page.open_path(ProductPage.CREATE_PRODUCT_PATH)
     product_page.create_product('', '', '', '')
     product_page.wait_for_element(product_page.ALERT_MESSAGE)    
     expected_messages = ["Nome é obrigatório", "Preco é obrigatório", "Descricao é obrigatório", "Quantidade é obrigatório"]

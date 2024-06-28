@@ -4,7 +4,7 @@ from pages.login_page import LoginPage
 @pytest.fixture(scope="function")
 def login_page(browser):
     page = LoginPage(browser)
-    page.open_url(LoginPage.LOGIN_URL)
+    page.open_path(LoginPage.LOGIN_PATH)
     return page
 
 def test_login_success(login_page):
