@@ -67,4 +67,4 @@ pytest-project/
 
 ## Continuous integration
 
-This project has continuous integration with GitHub Actions. The configuration file is located at the path .github/workflows/k6.yml. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/pytest-project/report.html).
+This project has continuous integration with GitHub Actions. The configuration file is located at the path .github/workflows/k6.yml. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/pytest-serverest/report.html).
