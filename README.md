@@ -1,3 +1,4 @@
+[![Pytest Tests](https://github.com/Samska/pytest-project/actions/workflows/pytest.yml/badge.svg)](https://github.com/Samska/pytest-project/actions/workflows/pytest.yml)
 [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 
 # Pytest Serverest Study
@@ -63,3 +64,7 @@ pytest-project/
  ├── pytest.ini                                     # Used for logs, markers, timeouts and another configs for the pytest
  ├── README.md                                      # README with project overview and instructions
 ```
+
+## Continuous integration
+
+This project has continuous integration with GitHub Actions. The configuration file is located at the path .github/workflows/k6.yml. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/pytest-project/report.html).
