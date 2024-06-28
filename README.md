@@ -1,4 +1,4 @@
-[![Pytest Tests](https://github.com/Samska/pytest-project/actions/workflows/pytest.yml/badge.svg)](https://github.com/Samska/pytest-project/actions/workflows/pytest.yml)
+[![Pytest Tests](https://github.com/Samska/pytest-serverest/actions/workflows/pytest.yml/badge.svg)](https://github.com/Samska/pytest-serverest/actions/workflows/pytest.yml)
 [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 
 # Pytest Serverest Study
