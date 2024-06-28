@@ -41,7 +41,10 @@ Install the required packages
 ## Project structure
 
 ```
-pytest-project/            
+pytest-project/
+ ├── .github/                               
+ │    ├── workflows/                        
+ │        ├── pytest.yml                            # Configuration for the tests on CI              
  ├── config/                                                                
  │    ├── requirements.txt                          # Required packages for the project
  ├── fixtures/                                                                
